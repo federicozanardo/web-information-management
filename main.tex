@@ -1,0 +1,124 @@
+% --------------------------------------------
+%         Web Information Management
+% --------------------------------------------
+%		            (2022) 
+%               Federico Zanardo
+% --------------------------------------------
+
+% --------------------------------------------
+% Package e configuration
+% --------------------------------------------
+
+\documentclass[12pt]{article}
+    
+    \usepackage{graphicx} 
+    \usepackage[utf8]{inputenc}
+    \usepackage[italian,english]{babel}
+    \usepackage{float}
+    \usepackage{subcaption}
+    \usepackage{wrapfig}
+    \usepackage[toc,page]{appendix}
+    \usepackage{longtable}
+
+    \usepackage{amsmath}
+    \usepackage{ebproof}
+    \usepackage{amssymb}
+    \usepackage{mathtools}
+
+    % INDICE - spaziatura del ToC
+    \usepackage{tocloft}
+    \renewcommand\cftsecafterpnum{\vskip18pt}
+
+    % DOCUMENT - margins
+    \usepackage[
+        top=2.5cm,
+        bottom=2.5cm, 
+        left=1.75cm,
+        right=1.75cm,
+        headheight=14.5pt,
+       ]{geometry}
+
+    % DOCUMENT - style and final page      
+    \usepackage{fancyhdr} 
+    \usepackage{lastpage}
+
+    \pagestyle{fancy}
+    \fancyhead[R]{ }
+    % \fancyhf{}
+    \fancyfoot{}
+    \fancyfoot[L]{Web Information Management}
+    \renewcommand{\headrulewidth}{0.1pt}
+    \renewcommand{\footrulewidth}{0.1pt}
+    \rfoot{Page \thepage \hspace{1pt} of \pageref*{LastPage}}
+    
+    \usepackage{xcolor}
+
+    \setlength{\parindent}{2.2em}
+	\setlength{\parskip}{1em}
+	\renewcommand{\baselinestretch}{1.075}
+
+    % LINK - colori degli url interni ed esterni
+    \usepackage{hyperref}         
+    \hypersetup{
+        colorlinks,
+        linkcolor={red!50!black},
+        citecolor={blue!50!black},
+        urlcolor={blue!80!black}
+    }
+    \PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+
+    % EXTRA - linea dritta
+    \newcommand{\hr}{\par\vspace{-.1\ht\strutbox}\noindent\hrulefill\par}
+
+    % EXTRA - Paginazione e appendice
+    \pagenumbering{Roman} % first pages
+    \renewcommand{\appendixname}{Appendice}
+    \renewcommand\appendixpagename{Appendice}
+    \renewcommand\appendixtocname{Appendice}
+
+    % EXTRA - TOC e LOF empty page numbering
+    \usepackage{tocloft}
+    \tocloftpagestyle{empty}%<- sets the page style on the first page of ToC, LoF and LoT
+    \usepackage[nottoc]{tocbibind}%<- add an ToC entry for LoF and LoT
+
+% ---------------------------
+% Intestazione
+% ---------------------------
+
+\title{ \huge\textsc{Web Information Management} \\
+		\large\textsc{Usability analysis}}
+\author{\textit{Federico Zanardo} (2020284) \\
+\small federico.zanardo.1@studenti.unipd.it}
+\date{\small June 2022}
+
+% ---------------------------
+% Body of the document
+% ---------------------------
+
+\begin{document} 
+
+\begin{figure}[t!]
+    \centering
+    \includegraphics[height=17em]{res/images/logo.png}
+\end{figure}
+
+\maketitle 
+\thispagestyle{empty}
+
+\begin{center}
+    \vspace{12em}
+    \hr
+    \textit{Master's Degree in Computer Science, UniPD}
+\end{center}
+
+\newpage
+\renewcommand{\baselinestretch}{0.95}\normalsize
+\tableofcontents
+\renewcommand{\baselinestretch}{1.075}\normalsize
+
+\newpage
+\input{res/sections_list}
+
+\end{document}
+
+% EOF
